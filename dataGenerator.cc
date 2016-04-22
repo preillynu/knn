@@ -61,7 +61,7 @@ int main(int argc, const char * argv[]) {
     }
     
     values.close();
-    cout << "Data was generated. See Customizable_Data.csv";
+    cout << "Data was generated. See Customizable_Data.txt";
     
     return 0;
     
