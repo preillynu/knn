@@ -86,6 +86,9 @@ int main()
 	float *devX, *devD;
 	int *devL;
 
+	//Set up the proper grid size
+	gridSize = (numInput + numPoints) / blockSize + 1;
+
 	//Set up the 2D coors array for the number of dimensions each point is
 	for (int i = 0; i < numDim; i++){
 		coors[i] = new float[numInput + numPoints];
