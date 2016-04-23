@@ -278,7 +278,7 @@ int main()
 	}
 
 	//Put the total number of data points at the top of the file
-	outputData << (numInput + numPoints) << numDim << numLabel << endl;
+	outputData << (numInput + numPoints) <<" "<< numDim <<" "<< numLabel << endl;
 
 	//Print each point and its correspoding label
 	for (int i = 0; i < numInput + numPoints; i++){
