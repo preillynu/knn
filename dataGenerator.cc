@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <iomanip>
 #include <fstream>
@@ -17,6 +18,9 @@ int main(int argc, const char * argv[]) {
     
     int numLabel;
     if ( ! (istringstream(argv[3]) >> numLabel) ) numLabel = 0;
+    
+    string textfile;
+    textfile = argv[4];
     ofstream values;
     
     random_device rd;
@@ -24,10 +28,10 @@ int main(int argc, const char * argv[]) {
     
     normal_distribution<> norm(2,1);
     
-    values.open("Customizable_Data.txt", ios::out | ios::trunc);
+    values.open(textfile, ios::out | ios::trunc);
     
     if(!values.is_open()){
-        cout << "Something went wrong when opening Customizable_Data.txt";
+        cout << "Something went wrong when opening " << textfile << endl;
         exit(0);
     }
     
@@ -61,9 +65,10 @@ int main(int argc, const char * argv[]) {
     }
     
     values.close();
-    cout << "Data was generated. See Customizable_Data.txt";
+    cout << "Data was generated. See " << textfile << endl;
     
     return 0;
     
 }
+
 
